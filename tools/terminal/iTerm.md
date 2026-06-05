@@ -360,6 +360,109 @@ Configure in `~/.gitconfig` for permanent use:
 
 ---
 
+## duf — Better df (Disk Free)
+
+```bash
+duf               # all mounted drives with usage bars
+duf /             # specific mount point
+duf --only local  # local drives only
+duf --json        # JSON output
+```
+
+---
+
+## dust — Better du (Disk Usage)
+
+```bash
+dust              # visual tree of what's eating space in current dir
+dust -n 20        # show top 20 largest items
+dust -d 2         # limit depth to 2 levels
+dust ~/Downloads  # check specific folder
+dust -r           # reverse order (smallest first)
+```
+
+---
+
+## bottom (btm) — System Monitor
+
+Full TUI system monitor. Replaces htop.
+
+```bash
+btm               # open bottom
+btm --basic       # simpler layout
+```
+
+**Inside btm:**
+| Key | Action |
+|---|---|
+| `?` | Help |
+| `q` | Quit |
+| `dd` | Kill process |
+| `Tab` | Switch widget |
+| `/` | Search processes |
+| `f` | Freeze display |
+| `↑` / `↓` | Navigate |
+
+---
+
+## Raycast — Spotlight Replacement
+
+Launch with `Cmd+Space` (replace Spotlight in System Settings).
+
+| Shortcut | Action |
+|---|---|
+| `Cmd+Space` | Open Raycast |
+| Type app name | Launch app |
+| `calc` | Calculator |
+| `Cmd+K` | Show all actions for selected item |
+| `Cmd+,` | Raycast preferences |
+
+**Most useful built-in commands:**
+```
+clipboard history    → recent clipboard items
+kill process         → kill any running process
+color picker         → pick a color from screen
+define word          → dictionary lookup
+uuid                 → generate UUID
+```
+
+---
+
+## Rectangle — Window Management
+
+Snap windows with keyboard shortcuts. No more dragging.
+
+| Shortcut | Action |
+|---|---|
+| `Ctrl+Opt+←` | Left half |
+| `Ctrl+Opt+→` | Right half |
+| `Ctrl+Opt+↑` | Top half |
+| `Ctrl+Opt+↓` | Bottom half |
+| `Ctrl+Opt+Enter` | Fullscreen |
+| `Ctrl+Opt+C` | Centre |
+| `Ctrl+Opt+U` | Top-left quarter |
+| `Ctrl+Opt+I` | Top-right quarter |
+| `Ctrl+Opt+J` | Bottom-left quarter |
+| `Ctrl+Opt+K` | Bottom-right quarter |
+
+---
+
+## Stats — Menu Bar Monitor
+
+Runs in your menu bar showing CPU, memory, disk, network in real time.
+
+Launch from Applications → Stats. Right-click the menu bar icon to configure which metrics to show.
+
+---
+
+## AltTab — Better App Switcher
+
+Press `Opt+Tab` to see live window previews of all open apps — like Windows Alt+Tab.
+
+Configure in `System Settings → Login Items` to launch at startup.
+
+---
+
 ## Aliases Reference
 
 All aliases defined in `~/.zshrc`:
@@ -403,6 +506,11 @@ find        → fd
 # Data
 json        → jq .
 yaml        → yq .
+
+# System monitoring
+df          → duf
+du          → dust
+top         → btm
 
 # Network
 ip          → curl -s ifconfig.me
